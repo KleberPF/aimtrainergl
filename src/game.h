@@ -11,6 +11,7 @@
 // settings
 #define SCR_WIDTH 1920
 #define SCR_HEIGHT 1080
+#define FULLSCREEN true
 
 #define START_CAPACITY 4
 #define MAX_ENTITY_COUNT 4096
@@ -43,7 +44,8 @@ typedef struct game {
 	float last_frame;
 
 	// objective related stuff
-	int score;
+	int shots_hit;
+	int total_shots;
 } Game;
 
 Game* game_create();

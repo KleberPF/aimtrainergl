@@ -8,7 +8,7 @@ Game* game_create()
 	Game* game = xmalloc(sizeof(*game));
 
 	// window needs to be created first to init glfw stuff (can't use opengl functions before that)
-	game->window = window_create(SCR_WIDTH, SCR_HEIGHT, "Aim Trainer GL", true);
+	game->window = window_create(SCR_WIDTH, SCR_HEIGHT, "Aim Trainer GL", FULLSCREEN);
 
 	// opengl stuff
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
@@ -35,7 +35,8 @@ Game* game_create()
 	game->delta_time = 0.0f;
 	game->last_frame = 0.0f;
 
-	game->score = 0;
+	game->shots_hit = 0;
+	game->total_shots = 0;
 
 	for (int i = -1; i <= 1; i++) {
 		for (int j = -1; j <= 1; j++) {
@@ -173,8 +174,10 @@ void game_update_entities(Game* game)
 
 		if (closest_entity != NULL) {
 			closest_entity->on_update(closest_entity, true);
-			game->score++;
+			game->shots_hit++;
 		}
+
+		game->total_shots++;
 	}
 }
 
@@ -248,8 +251,8 @@ void game_render(Game* game)
 	vec3s color = {0.5f, 0.8f, 0.2f};
 	shader_set_vec3(game->text_manager->shader, "color", &color);
 
-	char score_text[32];
-	sprintf(score_text, "Score: %d", game->score);
+	char score_text[64];
+	sprintf(score_text, "Shots hit: %d (%.2f%% accuracy)", game->shots_hit, game->total_shots > 0 ? (float)game->shots_hit * 100 / game->total_shots : 0);
 	text_manager_render_text(game->text_manager, score_text, 25.0f, 70.0f, 1.0f);
 	text_manager_render_text(game->text_manager, "Press ESC to quit", 25.0f, 25.0f, 1.0f);
 }
