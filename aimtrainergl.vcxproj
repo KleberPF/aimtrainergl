@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{24a343f3-1cf1-4d28-88b5-66bdefb1c9b7}</ProjectGuid>
+    <RootNamespace>aimtrainercgl</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>aimtrainergl</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;glfw3.lib;freetyped.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;glfw3.lib;freetyped.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;glfw3.lib;freetyped.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;glfw3.lib;freetyped.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\camera.c" />
+    <ClCompile Include="src\entity.c" />
+    <ClCompile Include="src\filereader.c" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\globject.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\game.c" />
+    <ClCompile Include="src\shader.c" />
+    <ClCompile Include="src\sprite.c" />
+    <ClCompile Include="src\text_manager.c" />
+    <ClCompile Include="src\util.c" />
+    <ClCompile Include="src\window.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cglm\aabb2d.h" />
+    <ClInclude Include="include\cglm\affine-mat.h" />
+    <ClInclude Include="include\cglm\affine-post.h" />
+    <ClInclude Include="include\cglm\affine-pre.h" />
+    <ClInclude Include="include\cglm\affine.h" />
+    <ClInclude Include="include\cglm\affine2d.h" />
+    <ClInclude Include="include\cglm\applesimd.h" />
+    <ClInclude Include="include\cglm\bezier.h" />
+    <ClInclude Include="include\cglm\box.h" />
+    <ClInclude Include="include\cglm\call.h" />
+    <ClInclude Include="include\cglm\call\aabb2d.h" />
+    <ClInclude Include="include\cglm\call\affine.h" />
+    <ClInclude Include="include\cglm\call\affine2d.h" />
+    <ClInclude Include="include\cglm\call\bezier.h" />
+    <ClInclude Include="include\cglm\call\box.h" />
+    <ClInclude Include="include\cglm\call\cam.h" />
+    <ClInclude Include="include\cglm\call\clipspace\ortho_lh_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\ortho_lh_zo.h" />
+    <ClInclude Include="include\cglm\call\clipspace\ortho_rh_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\ortho_rh_zo.h" />
+    <ClInclude Include="include\cglm\call\clipspace\persp_lh_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\persp_lh_zo.h" />
+    <ClInclude Include="include\cglm\call\clipspace\persp_rh_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\persp_rh_zo.h" />
+    <ClInclude Include="include\cglm\call\clipspace\project_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\project_zo.h" />
+    <ClInclude Include="include\cglm\call\clipspace\view_lh_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\view_lh_zo.h" />
+    <ClInclude Include="include\cglm\call\clipspace\view_rh_no.h" />
+    <ClInclude Include="include\cglm\call\clipspace\view_rh_zo.h" />
+    <ClInclude Include="include\cglm\call\curve.h" />
+    <ClInclude Include="include\cglm\call\ease.h" />
+    <ClInclude Include="include\cglm\call\euler.h" />
+    <ClInclude Include="include\cglm\call\frustum.h" />
+    <ClInclude Include="include\cglm\call\io.h" />
+    <ClInclude Include="include\cglm\call\ivec2.h" />
+    <ClInclude Include="include\cglm\call\ivec3.h" />
+    <ClInclude Include="include\cglm\call\ivec4.h" />
+    <ClInclude Include="include\cglm\call\mat2.h" />
+    <ClInclude Include="include\cglm\call\mat2x3.h" />
+    <ClInclude Include="include\cglm\call\mat2x4.h" />
+    <ClInclude Include="include\cglm\call\mat3.h" />
+    <ClInclude Include="include\cglm\call\mat3x2.h" />
+    <ClInclude Include="include\cglm\call\mat3x4.h" />
+    <ClInclude Include="include\cglm\call\mat4.h" />
+    <ClInclude Include="include\cglm\call\mat4x2.h" />
+    <ClInclude Include="include\cglm\call\mat4x3.h" />
+    <ClInclude Include="include\cglm\call\plane.h" />
+    <ClInclude Include="include\cglm\call\project.h" />
+    <ClInclude Include="include\cglm\call\quat.h" />
+    <ClInclude Include="include\cglm\call\ray.h" />
+    <ClInclude Include="include\cglm\call\sphere.h" />
+    <ClInclude Include="include\cglm\call\vec2.h" />
+    <ClInclude Include="include\cglm\call\vec3.h" />
+    <ClInclude Include="include\cglm\call\vec4.h" />
+    <ClInclude Include="include\cglm\cam.h" />
+    <ClInclude Include="include\cglm\cglm.h" />
+    <ClInclude Include="include\cglm\clipspace\ortho_lh_no.h" />
+    <ClInclude Include="include\cglm\clipspace\ortho_lh_zo.h" />
+    <ClInclude Include="include\cglm\clipspace\ortho_rh_no.h" />
+    <ClInclude Include="include\cglm\clipspace\ortho_rh_zo.h" />
+    <ClInclude Include="include\cglm\clipspace\persp.h" />
+    <ClInclude Include="include\cglm\clipspace\persp_lh_no.h" />
+    <ClInclude Include="include\cglm\clipspace\persp_lh_zo.h" />
+    <ClInclude Include="include\cglm\clipspace\persp_rh_no.h" />
+    <ClInclude Include="include\cglm\clipspace\persp_rh_zo.h" />
+    <ClInclude Include="include\cglm\clipspace\project_no.h" />
+    <ClInclude Include="include\cglm\clipspace\project_zo.h" />
+    <ClInclude Include="include\cglm\clipspace\view_lh.h" />
+    <ClInclude Include="include\cglm\clipspace\view_lh_no.h" />
+    <ClInclude Include="include\cglm\clipspace\view_lh_zo.h" />
+    <ClInclude Include="include\cglm\clipspace\view_rh.h" />
+    <ClInclude Include="include\cglm\clipspace\view_rh_no.h" />
+    <ClInclude Include="include\cglm\clipspace\view_rh_zo.h" />
+    <ClInclude Include="include\cglm\color.h" />
+    <ClInclude Include="include\cglm\common.h" />
+    <ClInclude Include="include\cglm\curve.h" />
+    <ClInclude Include="include\cglm\ease.h" />
+    <ClInclude Include="include\cglm\euler.h" />
+    <ClInclude Include="include\cglm\frustum.h" />
+    <ClInclude Include="include\cglm\handed\euler_to_quat_lh.h" />
+    <ClInclude Include="include\cglm\handed\euler_to_quat_rh.h" />
+    <ClInclude Include="include\cglm\io.h" />
+    <ClInclude Include="include\cglm\ivec2.h" />
+    <ClInclude Include="include\cglm\ivec3.h" />
+    <ClInclude Include="include\cglm\ivec4.h" />
+    <ClInclude Include="include\cglm\mat2.h" />
+    <ClInclude Include="include\cglm\mat2x3.h" />
+    <ClInclude Include="include\cglm\mat2x4.h" />
+    <ClInclude Include="include\cglm\mat3.h" />
+    <ClInclude Include="include\cglm\mat3x2.h" />
+    <ClInclude Include="include\cglm\mat3x4.h" />
+    <ClInclude Include="include\cglm\mat4.h" />
+    <ClInclude Include="include\cglm\mat4x2.h" />
+    <ClInclude Include="include\cglm\mat4x3.h" />
+    <ClInclude Include="include\cglm\plane.h" />
+    <ClInclude Include="include\cglm\project.h" />
+    <ClInclude Include="include\cglm\quat.h" />
+    <ClInclude Include="include\cglm\ray.h" />
+    <ClInclude Include="include\cglm\simd\arm.h" />
+    <ClInclude Include="include\cglm\simd\avx\affine.h" />
+    <ClInclude Include="include\cglm\simd\avx\mat4.h" />
+    <ClInclude Include="include\cglm\simd\intrin.h" />
+    <ClInclude Include="include\cglm\simd\neon\affine.h" />
+    <ClInclude Include="include\cglm\simd\neon\mat2.h" />
+    <ClInclude Include="include\cglm\simd\neon\mat4.h" />
+    <ClInclude Include="include\cglm\simd\neon\quat.h" />
+    <ClInclude Include="include\cglm\simd\sse2\affine.h" />
+    <ClInclude Include="include\cglm\simd\sse2\mat2.h" />
+    <ClInclude Include="include\cglm\simd\sse2\mat3.h" />
+    <ClInclude Include="include\cglm\simd\sse2\mat4.h" />
+    <ClInclude Include="include\cglm\simd\sse2\quat.h" />
+    <ClInclude Include="include\cglm\simd\wasm.h" />
+    <ClInclude Include="include\cglm\simd\wasm\affine.h" />
+    <ClInclude Include="include\cglm\simd\wasm\mat2.h" />
+    <ClInclude Include="include\cglm\simd\wasm\mat3.h" />
+    <ClInclude Include="include\cglm\simd\wasm\mat4.h" />
+    <ClInclude Include="include\cglm\simd\wasm\quat.h" />
+    <ClInclude Include="include\cglm\simd\x86.h" />
+    <ClInclude Include="include\cglm\sphere.h" />
+    <ClInclude Include="include\cglm\struct.h" />
+    <ClInclude Include="include\cglm\struct\aabb2d.h" />
+    <ClInclude Include="include\cglm\struct\affine-mat.h" />
+    <ClInclude Include="include\cglm\struct\affine-post.h" />
+    <ClInclude Include="include\cglm\struct\affine-pre.h" />
+    <ClInclude Include="include\cglm\struct\affine.h" />
+    <ClInclude Include="include\cglm\struct\affine2d.h" />
+    <ClInclude Include="include\cglm\struct\box.h" />
+    <ClInclude Include="include\cglm\struct\cam.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\ortho_lh_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\ortho_lh_zo.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\ortho_rh_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\ortho_rh_zo.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\persp_lh_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\persp_lh_zo.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\persp_rh_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\persp_rh_zo.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\project_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\project_zo.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\view_lh_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\view_lh_zo.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\view_rh_no.h" />
+    <ClInclude Include="include\cglm\struct\clipspace\view_rh_zo.h" />
+    <ClInclude Include="include\cglm\struct\color.h" />
+    <ClInclude Include="include\cglm\struct\curve.h" />
+    <ClInclude Include="include\cglm\struct\euler.h" />
+    <ClInclude Include="include\cglm\struct\frustum.h" />
+    <ClInclude Include="include\cglm\struct\handed\euler_to_quat_lh.h" />
+    <ClInclude Include="include\cglm\struct\handed\euler_to_quat_rh.h" />
+    <ClInclude Include="include\cglm\struct\io.h" />
+    <ClInclude Include="include\cglm\struct\mat2.h" />
+    <ClInclude Include="include\cglm\struct\mat2x3.h" />
+    <ClInclude Include="include\cglm\struct\mat2x4.h" />
+    <ClInclude Include="include\cglm\struct\mat3.h" />
+    <ClInclude Include="include\cglm\struct\mat3x2.h" />
+    <ClInclude Include="include\cglm\struct\mat3x4.h" />
+    <ClInclude Include="include\cglm\struct\mat4.h" />
+    <ClInclude Include="include\cglm\struct\mat4x2.h" />
+    <ClInclude Include="include\cglm\struct\mat4x3.h" />
+    <ClInclude Include="include\cglm\struct\plane.h" />
+    <ClInclude Include="include\cglm\struct\project.h" />
+    <ClInclude Include="include\cglm\struct\quat.h" />
+    <ClInclude Include="include\cglm\struct\sphere.h" />
+    <ClInclude Include="include\cglm\struct\vec2-ext.h" />
+    <ClInclude Include="include\cglm\struct\vec2.h" />
+    <ClInclude Include="include\cglm\struct\vec3-ext.h" />
+    <ClInclude Include="include\cglm\struct\vec3.h" />
+    <ClInclude Include="include\cglm\struct\vec4-ext.h" />
+    <ClInclude Include="include\cglm\struct\vec4.h" />
+    <ClInclude Include="include\cglm\types-struct.h" />
+    <ClInclude Include="include\cglm\types.h" />
+    <ClInclude Include="include\cglm\util.h" />
+    <ClInclude Include="include\cglm\vec2-ext.h" />
+    <ClInclude Include="include\cglm\vec2.h" />
+    <ClInclude Include="include\cglm\vec3-ext.h" />
+    <ClInclude Include="include\cglm\vec3.h" />
+    <ClInclude Include="include\cglm\vec4-ext.h" />
+    <ClInclude Include="include\cglm\vec4.h" />
+    <ClInclude Include="include\cglm\version.h" />
+    <ClInclude Include="include\freetype\config\ftconfig.h" />
+    <ClInclude Include="include\freetype\config\ftheader.h" />
+    <ClInclude Include="include\freetype\config\ftmodule.h" />
+    <ClInclude Include="include\freetype\config\ftoption.h" />
+    <ClInclude Include="include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="include\freetype\config\integer-types.h" />
+    <ClInclude Include="include\freetype\config\mac-support.h" />
+    <ClInclude Include="include\freetype\config\public-macros.h" />
+    <ClInclude Include="include\freetype\freetype.h" />
+    <ClInclude Include="include\freetype\ftadvanc.h" />
+    <ClInclude Include="include\freetype\ftbbox.h" />
+    <ClInclude Include="include\freetype\ftbdf.h" />
+    <ClInclude Include="include\freetype\ftbitmap.h" />
+    <ClInclude Include="include\freetype\ftbzip2.h" />
+    <ClInclude Include="include\freetype\ftcache.h" />
+    <ClInclude Include="include\freetype\ftchapters.h" />
+    <ClInclude Include="include\freetype\ftcid.h" />
+    <ClInclude Include="include\freetype\ftcolor.h" />
+    <ClInclude Include="include\freetype\ftdriver.h" />
+    <ClInclude Include="include\freetype\fterrdef.h" />
+    <ClInclude Include="include\freetype\fterrors.h" />
+    <ClInclude Include="include\freetype\ftfntfmt.h" />
+    <ClInclude Include="include\freetype\ftgasp.h" />
+    <ClInclude Include="include\freetype\ftglyph.h" />
+    <ClInclude Include="include\freetype\ftgxval.h" />
+    <ClInclude Include="include\freetype\ftgzip.h" />
+    <ClInclude Include="include\freetype\ftimage.h" />
+    <ClInclude Include="include\freetype\ftincrem.h" />
+    <ClInclude Include="include\freetype\ftlcdfil.h" />
+    <ClInclude Include="include\freetype\ftlist.h" />
+    <ClInclude Include="include\freetype\ftlogging.h" />
+    <ClInclude Include="include\freetype\ftlzw.h" />
+    <ClInclude Include="include\freetype\ftmac.h" />
+    <ClInclude Include="include\freetype\ftmm.h" />
+    <ClInclude Include="include\freetype\ftmodapi.h" />
+    <ClInclude Include="include\freetype\ftmoderr.h" />
+    <ClInclude Include="include\freetype\ftotval.h" />
+    <ClInclude Include="include\freetype\ftoutln.h" />
+    <ClInclude Include="include\freetype\ftparams.h" />
+    <ClInclude Include="include\freetype\ftpfr.h" />
+    <ClInclude Include="include\freetype\ftrender.h" />
+    <ClInclude Include="include\freetype\ftsizes.h" />
+    <ClInclude Include="include\freetype\ftsnames.h" />
+    <ClInclude Include="include\freetype\ftstroke.h" />
+    <ClInclude Include="include\freetype\ftsynth.h" />
+    <ClInclude Include="include\freetype\ftsystem.h" />
+    <ClInclude Include="include\freetype\fttrigon.h" />
+    <ClInclude Include="include\freetype\fttypes.h" />
+    <ClInclude Include="include\freetype\ftwinfnt.h" />
+    <ClInclude Include="include\freetype\internal\autohint.h" />
+    <ClInclude Include="include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="include\freetype\internal\compiler-macros.h" />
+    <ClInclude Include="include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="include\freetype\internal\fthash.h" />
+    <ClInclude Include="include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="include\freetype\internal\ftmmtypes.h" />
+    <ClInclude Include="include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="include\freetype\internal\ftserv.h" />
+    <ClInclude Include="include\freetype\internal\ftstream.h" />
+    <ClInclude Include="include\freetype\internal\fttrace.h" />
+    <ClInclude Include="include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="include\freetype\internal\psaux.h" />
+    <ClInclude Include="include\freetype\internal\pshints.h" />
+    <ClInclude Include="include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="include\freetype\internal\sfnt.h" />
+    <ClInclude Include="include\freetype\internal\svginterface.h" />
+    <ClInclude Include="include\freetype\internal\t1types.h" />
+    <ClInclude Include="include\freetype\internal\tttypes.h" />
+    <ClInclude Include="include\freetype\internal\wofftypes.h" />
+    <ClInclude Include="include\freetype\otsvg.h" />
+    <ClInclude Include="include\freetype\t1tables.h" />
+    <ClInclude Include="include\freetype\ttnameid.h" />
+    <ClInclude Include="include\freetype\tttables.h" />
+    <ClInclude Include="include\freetype\tttags.h" />
+    <ClInclude Include="include\ft2build.h" />
+    <ClInclude Include="include\glad\glad.h" />
+    <ClInclude Include="include\GLFW\glfw3.h" />
+    <ClInclude Include="include\GLFW\glfw3native.h" />
+    <ClInclude Include="include\KHR\khrplatform.h" />
+    <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\entity.h" />
+    <ClInclude Include="src\filereader.h" />
+    <ClInclude Include="src\globject.h" />
+    <ClInclude Include="src\objects.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\sprite.h" />
+    <ClInclude Include="src\text_manager.h" />
+    <ClInclude Include="src\util.h" />
+    <ClInclude Include="src\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="resources\models\sphere.model" />
+    <None Include="resources\shaders\shader.frag" />
+    <None Include="resources\shaders\shader.vert" />
+    <None Include="resources\shaders\text.frag" />
+    <None Include="resources\shaders\text.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\freetyped.lib" />
+    <Library Include="lib\glfw3.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
