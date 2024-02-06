@@ -55,8 +55,8 @@ void target_on_update(Entity* entity, bool hit)
 {
 	if (hit) {
 		vec3s new_coord = {0};
-		new_coord.x = (rand() % 11) * 2 - 10;
-		new_coord.y = (rand() % 5) * 2 + 2;
+		new_coord.x = (((float)rand() / RAND_MAX) * 2 - 1) * 10; // [-10, 10]
+		new_coord.y = ((float)rand() / RAND_MAX) * 8 + 2; // [2, 10]
 		new_coord.z = -15.0f;
 		entity_move(entity, new_coord);
 	}

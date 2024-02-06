@@ -1,10 +1,13 @@
 #include "game.h"
 
+#include <time.h>
+
 #include "util.h"
 #include "objects.h"
 
 Game* game_create()
 {
+	srand(time(0));
 	Game* game = xmalloc(sizeof(*game));
 
 	// window needs to be created first to init glfw stuff (can't use opengl functions before that)
